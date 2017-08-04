@@ -4,6 +4,9 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
 	<title></title>
   <style>
+    .header {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -11,10 +14,10 @@
 
 <br>
 <div class="container">
-<h1 class="title is-1 has-text-centered">Vegaroo</h1>
-<div class="box">
-  <h3 class="title is-3 has-text-centered">The easiest way to calculate the environmental impact of eating fewer animal products</h3>
-</div>
+  <h1 class="title is-1 has-text-centered">Vegaroo</h1>
+  <div class="box">
+    <h3 class="title is-3 has-text-centered">The easiest way to calculate the environmental impact of your diet</h3>
+  </div>
 <br>
 
   <input type="range" id="myRange" value="0" step ="25" oninput="updateValue(this.value)" style="width: 100%;">
@@ -37,7 +40,6 @@
     </div>
   </div>
   <!-- End of row 1  -->
-  
   <div class="tile is-ancestor">
     <div class="tile is-parent">
       <article class="tile is-child box notification is-success has-text-centered ">
@@ -62,45 +64,12 @@
       </article>
     </div>
   </div>
-  <!-- End of row 2 -->
 
-  <div class="card">
-    <div class="card-content">
-      <p class="title">
-        Eating vegan for 1 week will result in saving 4620 liters of water
-      </p>
-      <p class="subtitle">
-      </p>
-    </div>
-    <footer class="card-footer">
-      <p class="card-footer-item">
-        <span>
-          Share on Twitter
-        </span>
-      </p>
-      <p class="card-footer-item">
-        <span>
-          Share on Facebook
-        </span>
-      </p>
-      <p class="card-footer-item">
-        <span>
-          Share on Instagram
-        </span>
-      </p>
-        <p class="card-footer-item">
-        <span>
-          Share via Email
-        </span>
-      </p>
-    </footer>
-  </div>
-  <!-- End of card -->
-</div>
+  <!-- End of row 2 -->
 <br>
 <hr>
-<div class="box">
-  <h3 class="title is-3">Why to go Vegan</h3>
+<div class="content">
+  <h1 class="title is-2 header">Why to go Vegan</h1>
 </div>
 <div class="columns">
   <div class="column">
@@ -108,7 +77,7 @@
       <div class="tile is-parent">
         <article class="tile is-child notification is-primary">
           <p class="title">Improve Your Health</p>
-          <p class="subtitle">A Vegan Diet has numerous physical and mental health benefits</p>
+          <p class="subtitle">Eating less meat has numerous physical and mental health benefits</p>
           <figure class="image is-4by3">
             <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
           </figure>
@@ -117,89 +86,134 @@
     </a>
   </div>
   <div class="column">
-    <div class="tile is-parent">
-      <article class="tile is-child notification is-light">
-        <p class="title">Thug Kitchen</p>
-        <p class="subtitle">For The Vegan Foodie</p>
-        <figure class="image is-4by3">
-          <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
-        </figure>
-      </article>
-    </div>
+    <a href="environment.html">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-light">
+          <p class="title">Fight Climate Change</p>
+          <p class="subtitle">Animal Agriculture accounts for more than 50% of all greenhouse gas emissions</p>
+          <figure class="image is-4by3">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+          </figure>
+        </article>
+      </div>
+    </a>
   </div>
   <div class="column">
-    <div class="tile is-parent">
-      <article class="tile is-child notification is-black">
-        <p class="title">Oh She Glows</p>
-        <p class="subtitle">Short Description</p>
-        <figure class="image is-4by3">
-          <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
-        </figure>
-      </article>
-    </div>
+    <a href="money.html">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-black">
+          <p class="title">Save Money</p>
+          <p class="subtitle">Eating vegan doesn't have to break the bank. Find out how!</p>
+          <figure class="image is-4by3">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+          </figure>
+        </article>
+      </div>
+    </a>
   </div>
   <div class="column">
-    <div class="tile is-parent">
-      <article class="tile is-child notification is-black">
-        <p class="title">Oh She Glows</p>
-        <p class="subtitle">Short Description</p>
-        <figure class="image is-4by3">
-          <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
-        </figure>
-      </article>
-    </div>
+    <a href="animals.html">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-black">
+          <p class="title">Animal Cruelty</p>
+          <p class="subtitle">More than 56 million animals are brutally killed each year for human consumption</p>
+          <figure class="image is-4by3">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+          </figure>
+        </article>
+      </div>
+    </a>
   </div>
 
 </div>
-
-<div class="box">
-  <h3 class="title is-3">How to go Vegan</h3>
+<hr>
+<div class="content">
+  <h1 class="title is-2 header">How to go Vegan</h1>
 </div>
 
 <div class="columns">
   <div class="column">
-    <div class="tile is-parent">
-      <article class="tile is-child notification is-info">
-        <p class="title">Minimalist Baker</p>
-        <p class="subtitle">Short Description</p>
-        <figure class="image is-4by3">
-          <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
-        </figure>
-      </article>
-    </div>
+    <a href="what-to-eat.html">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-info">
+          <p class="title">What to eat</p>
+          <p class="subtitle">Going Vegan has never been easier</p>
+          <figure class="image is-4by3">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+          </figure>
+        </article>
+      </div>
+    </a>
   </div>
   <div class="column">
-    <div class="tile is-parent">
-      <article class="tile is-child notification is-success">
-        <p class="title"><a href="mindset.html">link text</a></p>
-        <p class="subtitle">Short Description</p>
-        <figure class="image is-4by3">
-          <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
-        </figure>
-      </article>
-    </div>
+    <a href="mindset.html">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-success">
+          <p class="title"><a href="mindset.html">Vegan Mindset</a></p>
+          <p class="subtitle">Commit to making small changes</p>
+          <figure class="image is-4by3">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+          </figure>
+        </article>
+      </div>
+    </a>
   </div>
   <div class="column">
-    <div class="tile is-parent">
-      <article class="tile is-child notification is-grey">
-        <p class="title">Minimalist Baker</p>
-        <p class="subtitle">Short Description</p>
-        <figure class="image is-4by3">
-          <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
-        </figure>
-      </article>
-    </div>
+    <a href="https://vegaroo.slack.com">
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-grey">
+          <p class="title">Join The Community</p>
+          <p class="subtitle">Get supported by like-minded individuals</p>
+          <figure class="image is-4by3">
+            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+          </figure>
+        </article>
+      </div>
+    </a>
   </div>
 </div>
+<div class="card">
+  <div class="card-content">
+    <p class="title">
+      Eating vegan for 1 week will result in saving 4620 liters of water
+    </p>
+    <p class="subtitle">
+    </p>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+        <span>
+          Share on Twitter
+        </span>
+    </p>
+    <p class="card-footer-item">
+        <span>
+          Share on Facebook
+        </span>
+    </p>
+    <p class="card-footer-item">
+        <span>
+          Share on Instagram
+        </span>
+    </p>
+    <p class="card-footer-item">
+        <span>
+          Share via Email
+        </span>
+    </p>
+  </footer>
+</div>
+<!-- End of card -->
 
 <nav class="level">
-    <div class="level-item has-text-centered">
-      <a class="button is-success is-outlined is-large">
-          Join the Slack Group
-      </a>
-    </div>
-  </nav>
+  <div class="level-item has-text-centered">
+    <a class="button is-success is-outlined is-large">
+        Join The Community
+    </a>
+  </div>
+</nav>
 <!-- End of container -->
+</div>
 <br>
 
 
