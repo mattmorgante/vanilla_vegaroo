@@ -7,6 +7,15 @@
     .header {
       text-align: center;
     }
+    #update_text {
+      font-weight: bold;
+    }
+    .cta { background-color: #23d160;
+    color: white;}
+
+    .checkbox input, .radio input {
+      margin: 8px;
+    }
   </style>
 </head>
 <body>
@@ -14,42 +23,33 @@
 
 <br>
 <div class="container">
-  <h1 class="title is-1 has-text-centered">Vegaroo</h1>
-  <div class="box">
-    <h3 class="title is-3 has-text-centered">The easiest way to calculate the environmental impact of your diet. How much meat and dairy do you eat?</h3>
-  </div>
-<br>
+  <div class="box cta">
+    <h3 class="title has-text-centered" style="color:white">What is your diet?</h3>
 
-
-  <div class="control header">
-    <label class="radio">
-      <input type="radio" name="diet" onchange="updateValue(0)" checked>Average American
-    </label>
-    <label class="radio">
-      <input type="radio" name="diet" onchange="updateValue(1)">Average European
-    </label>
-    <label class="radio">
-      <input type="radio" name="diet" onchange="updateValue(2)">Pescatarian
-    </label>
-    <label class="radio">
-      <input type="radio" name="diet" onchange="updateValue(3)">Vegetarian
-    </label>
-    <label class="radio">
-      <input type="radio" name="diet" onchange="updateValue(4)">Vegan
-    </label>
-  </div>
-
-
-  <section class="hero is-grey">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title header">
-          Compared to an average American diet, every day a ______ will save:
-        </h1>
-      </div>
+    <div class="control header">
+      <label class="radio">
+        <input type="radio" name="diet" onchange="updateValue(0)" checked>Average American
+      </label>
+      <label class="radio">
+        <input type="radio" name="diet" onchange="updateValue(1)">Average European
+      </label>
+      <label class="radio">
+        <input type="radio" name="diet" onchange="updateValue(2)">Pescatarian
+      </label>
+      <label class="radio">
+        <input type="radio" name="diet" onchange="updateValue(3)">Vegetarian
+      </label>
+      <label class="radio">
+        <input type="radio" name="diet" onchange="updateValue(4)">Vegan
+      </label>
     </div>
-  </section>
+  </div>
 
+  <div class="container">
+    <h3 class="title header">
+      Compared to an Average American diet, every day a <br><span id="update_text">Average American</span> will save:
+    </h3>
+  </div>
   <!--<input type="range" id="myRange" value="0" step ="25" oninput="updateValue(this.value)" style="width: 100%;">-->
 
   <hr>
@@ -84,7 +84,7 @@
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box notification has-text-centered is-danger">
-        <p class="title">Animal Lives</p>
+        <p class="title">Waste</p>
         <div class="content widget" style="font-size: 2.5em">0
         </div>
         <p>Lives</p>
@@ -92,7 +92,7 @@
     </div>
     <div class="tile is-parent">
       <article class="tile is-child box notification has-text-centered is-primary">
-        <p class="title">Waste</p>
+        <p class="title">Animal Lives</p>
         <div class="content widget" style="font-size: 2.5em">0
         </div>
         <p>Kilograms</p>
@@ -167,19 +167,6 @@
     </a>
   </div>
   <div class="column">
-    <a href="money.html">
-      <div class="tile is-parent">
-        <article class="tile is-child notification is-success">
-          <p class="title">Save Money</p>
-          <p class="subtitle">Eating vegan doesn't have to break the bank. Find out how!</p>
-          <figure class="image is-4by3">
-            <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
-          </figure>
-        </article>
-      </div>
-    </a>
-  </div>
-  <div class="column">
     <a href="animals.html">
       <div class="tile is-parent">
         <article class="tile is-child notification is-danger">
@@ -227,11 +214,11 @@
     </a>
   </div>
   <div class="column">
-    <a href="https://vegaroo.slack.com">
+    <a href="money.html">
       <div class="tile is-parent">
         <article class="tile is-child notification is-success">
-          <p class="title">Join The Community</p>
-          <p class="subtitle">Get supported by like-minded individuals</p>
+          <p class="title">Save Money</p>
+          <p class="subtitle">Eating vegan doesn't have to break the bank. Find out how!</p>
           <figure class="image is-4by3">
             <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
           </figure>
@@ -264,6 +251,8 @@
     // 9 kilograms
 
     const values = [400, 9000, 30, 250 ,1];
+    const phrase = ['Average American', 'Average European', 'Pescatarian','Vegetarian','Vegan'];
+    var phraseEl = document.getElementById('update_text');
     var widgets = document.getElementsByClassName('widget');
     var newValues = [];
 
@@ -272,6 +261,7 @@
       console.log(slider);
       // iterate through $values, defined above
       // foreach i, multiply i by value of slider
+      phraseEl.innerHTML = phrase[slider];
       values.forEach(function(value, i) {
         newValues.push(value * slider);
         widgets[i].innerHTML = newValues[i];
